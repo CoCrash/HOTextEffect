@@ -502,6 +502,17 @@
 		EAB419772168A26600204583 /* TextEffect */ = {
 			isa = PBXGroup;
 			children = (
+				EAB41B3A216C5A7F00204583 /* Barrage */,
+				EAB41B39216C5A7800204583 /* Collision */,
+				EAB41B38216C5A6D00204583 /* Flash */,
+				EAB41B37216C5A6100204583 /* Hacker */,
+				EAB41B36216C5A4200204583 /* Normal */,
+				EAB41B35216C5A3B00204583 /* Shake */,
+				EAB41B34216C5A2E00204583 /* Puzzle */,
+				EAB41B33216C5A2200204583 /* Parallel */,
+				EAB41B32216C5A1800204583 /* Pinyin */,
+				EAB41B31216C5A1000204583 /* Plane */,
+				EAB41B30216C59F400204583 /* Shy */,
 				EAB4197C2168B11F00204583 /* Lightning */,
 				EAB419792168A27D00204583 /* Utils */,
 				EAB419782168A27200204583 /* Base */,
@@ -753,6 +764,83 @@
 				EAB41A59216B86EC00204583 /* img_fragment_18@3x.png */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		EAB41B30216C59F400204583 /* Shy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shy;
+			sourceTree = "<group>";
+		};
+		EAB41B31216C5A1000204583 /* Plane */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Plane;
+			sourceTree = "<group>";
+		};
+		EAB41B32216C5A1800204583 /* Pinyin */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pinyin;
+			sourceTree = "<group>";
+		};
+		EAB41B33216C5A2200204583 /* Parallel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Parallel;
+			sourceTree = "<group>";
+		};
+		EAB41B34216C5A2E00204583 /* Puzzle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Puzzle;
+			sourceTree = "<group>";
+		};
+		EAB41B35216C5A3B00204583 /* Shake */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shake;
+			sourceTree = "<group>";
+		};
+		EAB41B36216C5A4200204583 /* Normal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Normal;
+			sourceTree = "<group>";
+		};
+		EAB41B37216C5A6100204583 /* Hacker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Hacker;
+			sourceTree = "<group>";
+		};
+		EAB41B38216C5A6D00204583 /* Flash */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flash;
+			sourceTree = "<group>";
+		};
+		EAB41B39216C5A7800204583 /* Collision */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Collision;
+			sourceTree = "<group>";
+		};
+		EAB41B3A216C5A7F00204583 /* Barrage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Barrage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

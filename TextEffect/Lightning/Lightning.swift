@@ -49,6 +49,10 @@ class LightningText: AnimationView {
         return imageView
     }()
     
+    deinit {
+        print("闪电特效")
+    }
+    
     override func stop() {
         fragmentImageView.stopAnimating()
         super.stop()
@@ -65,7 +69,7 @@ class LightningText: AnimationView {
         } else {
             angle = 30.0
         }
-        
+        // TODO: optimize image load time
         var fragmentImages = [UIImage]()
         for i in 0..<53 {
             let name = "img_fragment_white_\(i+1)"
@@ -137,6 +141,11 @@ class LightningText: AnimationView {
         }
         
         // 劈死你
+        if .laminate != lightningRef, false == fragmentImageView.isAnimating {
+            fragmentImageView.animationDuration = Double((1.0 - currentProgress))*duration
+            fragmentImageView.startAnimating()
+        }
+        
         lightningRef = .laminate
         if progress > LightningStatus.laminate.progress()
             && false == lightningImageView.isHidden {
@@ -270,20 +279,15 @@ class LightningText: AnimationView {
         }
         
         if currentProgress > LightningStatus.lightning6.progress() {
-            if false == fragmentImageView.isAnimating {
-                fragmentImageView.animationDuration = Double((1.0 - currentProgress))*duration
-                
-                var frame = fragmentImageView.frame
-                if textCount > oneLineTextCount {
-                    frame.origin.x = adjustRotatePoint.x - frame.size.width + 5
-                    frame.origin.y = adjustRotatePoint.y - 10
-                } else {
-                    frame.origin.x = adjustRotatePoint.x - frame.size.width
-                    frame.origin.y = adjustRotatePoint.y - 5
-                }
-                fragmentImageView.frame = frame
-                fragmentImageView.startAnimating()
+            var frame = fragmentImageView.frame
+            if textCount > oneLineTextCount {
+                frame.origin.x = adjustRotatePoint.x - frame.size.width + 5
+                frame.origin.y = adjustRotatePoint.y - 10
+            } else {
+                frame.origin.x = adjustRotatePoint.x - frame.size.width
+                frame.origin.y = adjustRotatePoint.y - 5
             }
+            fragmentImageView.frame = frame
         }
         // end
         UIGraphicsPopContext()
